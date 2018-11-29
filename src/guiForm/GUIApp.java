@@ -9,6 +9,7 @@ import java.sql.*;
 public class GUIApp {
     private String adminId = "123456789";
     public boolean isAdmin;
+    private boolean addableClass;
     private guiForm.DBWrapper wrapper;
     //enroll button
     protected JButton enrollButton;
@@ -22,6 +23,7 @@ public class GUIApp {
     private JLabel firstNameLabel;
     private JLabel lastNameLabel;
     private JLabel studentIdLabel;
+    private JButton removeClassButton;
     //drop down class list
     protected JComboBox dropDownList;
     //connection
@@ -32,7 +34,6 @@ public class GUIApp {
     public GUIApp()
     {
         wrapper = new guiForm.DBWrapper();
-
         enrollButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
@@ -43,6 +44,8 @@ public class GUIApp {
                     if(!isAdmin)
                     {
                         switchAdmin();
+                        JOptionPane.showMessageDialog(null, "It seems you are an admin, Please" +
+                                "Enter The Appropriate Info.");
                     }
                     else
                     {
@@ -53,17 +56,23 @@ public class GUIApp {
                 {
                     if (isAdmin) {
                         switchStudent();
+                        JOptionPane.showMessageDialog(null, "It seems that you are a student, " +
+                                "Please enter the appropriate Info.");
                     }
                     else
                     {
                         enrollStudent();
                     }
                 }
-                JOptionPane.showMessageDialog(null, "You have been enrolled!");
+
             }
         });
-
-        dropDownList.addItem("Classes");
+        removeClassButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                removeClass();
+            }
+        });
     }
 
     public static void main(String[] args) throws SQLException
@@ -76,17 +85,22 @@ public class GUIApp {
         // always items to be selected from comboBox
         guiFrame.pack();
         guiFrame.setVisible(true);
-
     }
 
    private void switchStudent()
    {
-
+       firstNameLabel.setText("First Name");
+       lastNameLabel.setText("Last Name");
+       removeClassButton.setVisible(false);
+       enrollButton.setText("Enroll");
    }
 
    private void switchAdmin()
    {
-
+       firstNameLabel.setText("Classname");
+       lastNameLabel.setText("Class Capacity");
+       removeClassButton.setVisible(true);
+       enrollButton.setText("Add Class");
    }
 
    private void enrollStudent()
@@ -95,6 +109,11 @@ public class GUIApp {
    }
 
    private void addClass()
+   {
+
+   }
+
+   private void removeClass()
    {
 
    }

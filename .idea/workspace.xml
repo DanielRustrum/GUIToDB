@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5593af-0bff-41a4-8654-7faf23ae053c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DBWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GUIToDB/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUIToDB/guiForm/GUIApp$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GUIToDB/guiForm/GUIApp.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiForm/GUIApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/GUIApp.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiForm/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/GUIApp.java" afterDir="false" />
     </list>
@@ -27,10 +17,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+            <state relative-caret-position="149">
+              <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="class#631:964" />
+                <element signature="e#2204#2205#0" expanded="true" />
+                <element signature="e#2249#2250#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,8 +68,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Form.form" />
-        <option value="$PROJECT_DIR$/src/guiForm/GUIApp.form" />
         <option value="$PROJECT_DIR$/src/DBWrapper.java" />
+        <option value="$PROJECT_DIR$/src/guiForm/GUIApp.form" />
         <option value="$PROJECT_DIR$/src/guiForm/GUIApp.java" />
       </list>
     </option>
@@ -116,7 +109,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543472412028" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543474784524" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -145,25 +138,25 @@
       <updated>1542406020456</updated>
       <workItem from="1542406031280" duration="2054000" />
       <workItem from="1543353133538" duration="939000" />
-      <workItem from="1543440927274" duration="4589000" />
+      <workItem from="1543440927274" duration="6958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3390000" />
+    <option name="totallyTimeSpent" value="5759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="-11" width="1877" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25533077" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25533077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32915717" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32915717" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -201,9 +194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.desktop/java/awt/event/ActionListener.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -218,12 +208,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+        <state relative-caret-position="149">
+          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#631:964" />
+            <element signature="e#2204#2205#0" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
           </folding>
         </state>
       </provider>
