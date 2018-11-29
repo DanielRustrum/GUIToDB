@@ -1,6 +1,5 @@
 package guiForm;
 
-import java.util.Scanner;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,10 +7,21 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 public class GUIApp {
+    private String adminId = "123456789";
+    public boolean isAdmin;
+    private guiForm.DBWrapper wrapper;
     //enroll button
     protected JButton enrollButton;
     //main display
     protected JPanel mainPanel;
+    private JComboBox ClassBox;
+    private JTextField FNameText;
+    private JTextField LNameText;
+    private JTextField IdText;
+    private JLabel classesLabel;
+    private JLabel firstNameLabel;
+    private JLabel lastNameLabel;
+    private JLabel studentIdLabel;
     //drop down class list
     protected JComboBox dropDownList;
     //connection
@@ -21,11 +31,34 @@ public class GUIApp {
 
     public GUIApp()
     {
+        wrapper = new guiForm.DBWrapper();
+
         enrollButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
             {
-                // TO DO: warning message that cap had been reached and s/he has been put on a wait list for the class.
+                String userId = IdText.getText();
+                if(userId.equals(adminId))
+                {
+                    if(!isAdmin)
+                    {
+                        switchAdmin();
+                    }
+                    else
+                    {
+                        addClass();
+                    }
+                }
+                else
+                {
+                    if (isAdmin) {
+                        switchStudent();
+                    }
+                    else
+                    {
+                        enrollStudent();
+                    }
+                }
                 JOptionPane.showMessageDialog(null, "You have been enrolled!");
             }
         });
@@ -35,16 +68,7 @@ public class GUIApp {
 
     public static void main(String[] args) throws SQLException
     {
-        Scanner readInput = new Scanner(System.in);
-        System.out.println("Type 1 for admin and 2 for student: ");
-        // read user input
-        int input = readInput.nextInt();
-        readInput.close();
-        // if user is admin
-        if (input == 1|| input == 2)
-        {
-            adminApp();
-        }
+
 
         JFrame guiFrame = new JFrame("GUItoDB");
         guiFrame.setContentPane(new GUIApp().mainPanel);
@@ -54,6 +78,26 @@ public class GUIApp {
         guiFrame.setVisible(true);
 
     }
+
+   private void switchStudent()
+   {
+
+   }
+
+   private void switchAdmin()
+   {
+
+   }
+
+   private void enrollStudent()
+   {
+
+   }
+
+   private void addClass()
+   {
+
+   }
 
    public static void adminApp(){
 
@@ -70,4 +114,8 @@ public class GUIApp {
         connect.close();
     }catch(Exception e){ System.out.println(e);}
 }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
