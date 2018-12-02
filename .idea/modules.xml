@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GUIToDB.iml" filepath="$PROJECT_DIR$/GUIToDB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guiForm.iml" filepath="$PROJECT_DIR$/guiForm.iml" />
     </modules>
   </component>
 </project>
