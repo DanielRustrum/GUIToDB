@@ -112,21 +112,38 @@ public class GUIApp {
        enrollButton.setText("Add Class");
    }
 
+<<<<<<< HEAD
    private update
+=======
+   private void enrollStudent()
+   {
+        // wrapper.enroll(student_id, class_id); // <-- need to pass through class that student selects
+   }
+
+   private void addClass()
+   {
+    // wrapper.
+   }
+
+   private void removeClass()
+   {
+
+   }
+>>>>>>> master
 
    public static void adminApp(){
 
-    try{
-        // get driver
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        // establish connection
-        connect = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/enrollment","root","enter password here");
-        // create statement ready for sql
-        Statement stat = connect.createStatement();
-        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('2134', 'CS 345', '1')");
-        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('6891', 'CS 400', '1')");
-        connect.close();
-    }catch(Exception e){ System.out.println(e);}
+//    try{
+//        // get driver
+//        Class.forName("com.mysql.cj.jdbc.Driver");
+//        // establish connection
+//        connect = DriverManager.getConnection(
+//                "jdbc:mysql://localhost:3306/enrollment","root","enter password here");
+//        // create statement ready for sql
+//        Statement stat = connect.createStatement();
+//        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('2134', 'CS 345', '1')");
+//        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('6891', 'CS 400', '1')");
+//        connect.close();
+//    }catch(Exception e){ System.out.println(e);}
 }
 }
