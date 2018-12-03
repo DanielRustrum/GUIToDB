@@ -8,8 +8,15 @@ import java.sql.*;
 
 public class GUIApp {
     private String adminId = "123456789";
+<<<<<<< HEAD
     private boolean isAdmin = false;
     private guiForm.Logic logic;
+=======
+    public boolean isAdmin;
+    private boolean addableClass;
+    // I am assuming we are using this wrapper for a session's DB connection -- Jess
+    private guiForm.DBWrapper wrapper;
+>>>>>>> master
     //enroll button
     protected JButton enrollButton;
     //main display
@@ -22,7 +29,7 @@ public class GUIApp {
     private JLabel lastNameLabel;
     private JButton removeClassButton;
     //connection
-    private static Connection connect;
+    // private static Connection connect;
 
 
 
