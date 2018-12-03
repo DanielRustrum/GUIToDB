@@ -1198,12 +1198,16 @@
       <RefSchemaName>enrollment</RefSchemaName>
       <RefTableName>student</RefTableName>
       <RefColNames>student_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <foreign-key id="301" parent="285" name="class_id">
       <ColNames>class_id</ColNames>
       <RefSchemaName>enrollment</RefSchemaName>
       <RefTableName>class</RefTableName>
       <RefColNames>class_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="302" parent="286" name="student_id">
       <Position>1</Position>
@@ -1231,48 +1235,60 @@
       <ColNames>student_id</ColNames>
       <UnderlyingIndexName>student_student_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="307" parent="287" name="student_idWait">
+    <column id="307" parent="287" name="student_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="287" name="class_idWait">
+    <column id="308" parent="287" name="class_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="309" parent="287" name="waitListQueue">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="310" parent="287" name="wait_list_waitListQueue_uindex">
-      <ColNames>waitListQueue</ColNames>
+    <index id="310" parent="287" name="wait_list_student_id_uindex">
+      <ColNames>student_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="311" parent="287" name="class_idWait">
-      <ColNames>student_idWait</ColNames>
+    <index id="311" parent="287" name="wait_list_class_id_uindex">
+      <ColNames>class_id</ColNames>
+      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="312" parent="287" name="wait_list_waitListQueue_uindex">
-      <ColNames>waitListQueue</ColNames>
-      <UnderlyingIndexName>wait_list_waitListQueue_uindex</UnderlyingIndexName>
+    <key id="312" parent="287" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>student_id</ColNames>
+      <Primary>1</Primary>
     </key>
-    <foreign-key id="313" parent="287" name="class_idWait">
-      <ColNames>student_idWait</ColNames>
-      <RefSchemaName>enrollment</RefSchemaName>
-      <RefTableName>class</RefTableName>
-      <RefColNames>class_id</RefColNames>
-    </foreign-key>
-    <foreign-key id="314" parent="287" name="student_idWait">
-      <ColNames>student_idWait</ColNames>
+    <key id="313" parent="287" name="wait_list_student_id_uindex">
+      <ColNames>student_id</ColNames>
+      <UnderlyingIndexName>wait_list_student_id_uindex</UnderlyingIndexName>
+    </key>
+    <key id="314" parent="287" name="wait_list_class_id_uindex">
+      <ColNames>class_id</ColNames>
+      <UnderlyingIndexName>wait_list_class_id_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="315" parent="287" name="student_idWait">
+      <ColNames>student_id</ColNames>
       <RefSchemaName>enrollment</RefSchemaName>
       <RefTableName>student</RefTableName>
       <RefColNames>student_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="316" parent="287" name="class_idWait">
+      <ColNames>class_id</ColNames>
+      <RefSchemaName>enrollment</RefSchemaName>
+      <RefTableName>class</RefTableName>
+      <RefColNames>class_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
     </foreign-key>
   </database-model>
 </dataSource>

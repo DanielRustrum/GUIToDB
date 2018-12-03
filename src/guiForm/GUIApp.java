@@ -111,7 +111,7 @@ public class GUIApp {
 
    private void addClass()
    {
-
+    // wrapper.
    }
 
    private void removeClass()
