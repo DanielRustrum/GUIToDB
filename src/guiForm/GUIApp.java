@@ -8,9 +8,8 @@ import java.sql.*;
 
 public class GUIApp {
     private String adminId = "123456789";
-    public boolean isAdmin;
-    private boolean addableClass;
-    private guiForm.DBWrapper wrapper;
+    private boolean isAdmin = false;
+    private guiForm.Logic logic;
     //enroll button
     protected JButton enrollButton;
     //main display
@@ -19,13 +18,9 @@ public class GUIApp {
     private JTextField FNameText;
     private JTextField LNameText;
     private JTextField IdText;
-    private JLabel classesLabel;
     private JLabel firstNameLabel;
     private JLabel lastNameLabel;
-    private JLabel studentIdLabel;
     private JButton removeClassButton;
-    //drop down class list
-    protected JComboBox dropDownList;
     //connection
     private static Connection connect;
 
@@ -33,7 +28,7 @@ public class GUIApp {
 
     public GUIApp()
     {
-        wrapper = new guiForm.DBWrapper();
+        logic = new guiForm.Logic();
         enrollButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
@@ -46,10 +41,13 @@ public class GUIApp {
                         switchAdmin();
                         JOptionPane.showMessageDialog(null, "It seems you are an admin, Please" +
                                 "Enter The Appropriate Info.");
+                        isAdmin = true;
                     }
                     else
                     {
-                        addClass();
+                        String className = FNameText.getText();
+                        String capacity = LNameText.getText();
+                        logic.addClass(className, capacity);
                     }
                 }
                 else
@@ -58,10 +56,14 @@ public class GUIApp {
                         switchStudent();
                         JOptionPane.showMessageDialog(null, "It seems that you are a student, " +
                                 "Please enter the appropriate Info.");
+                        isAdmin = false;
                     }
                     else
                     {
-                        enrollStudent();
+                        Object item = ClassBox.getSelectedItem();
+                        String fName = FNameText.getText();
+                        String lName = LNameText.getText();
+                        logic.enrollStudent(item, fName, lName, userId);
                     }
                 }
 
@@ -70,7 +72,8 @@ public class GUIApp {
         removeClassButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                removeClass();
+                Object item = ClassBox.getSelectedItem();
+                logic.removeClass(item);
             }
         });
     }
@@ -82,7 +85,6 @@ public class GUIApp {
         JFrame guiFrame = new JFrame("GUItoDB");
         guiFrame.setContentPane(new GUIApp().mainPanel);
         guiFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // always items to be selected from comboBox
         guiFrame.pack();
         guiFrame.setVisible(true);
     }
@@ -103,20 +105,7 @@ public class GUIApp {
        enrollButton.setText("Add Class");
    }
 
-   private void enrollStudent()
-   {
-
-   }
-
-   private void addClass()
-   {
-
-   }
-
-   private void removeClass()
-   {
-
-   }
+   private update
 
    public static void adminApp(){
 
@@ -133,8 +122,4 @@ public class GUIApp {
         connect.close();
     }catch(Exception e){ System.out.println(e);}
 }
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }
