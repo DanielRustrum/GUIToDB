@@ -128,7 +128,6 @@ public class DBWrapper {
 
         // need to see if student has enrolled before
         ResultSet enrollDB = selectStat.executeQuery("SELECT * FROM enroll");
-
         //check if there is anything in DB
         boolean studentEnrolled = enrollDB.first();
         System.out.println(studentEnrolled);

@@ -1,18 +1,17 @@
 package guiForm;
 
 import javax.swing.*;
-import java.awt.*;
+import java.util.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class GUIApp {
     private String adminId = "123456789";
     private boolean isAdmin = false;
     private guiForm.Logic logic;
-    //enroll button
     protected JButton enrollButton;
-    //main display
     protected JPanel mainPanel;
     private JComboBox ClassBox;
     private JTextField FNameText;
@@ -31,6 +30,7 @@ public class GUIApp {
     public GUIApp()
     {
         logic = new guiForm.Logic();
+        updateComboBox();
         enrollButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
@@ -50,6 +50,7 @@ public class GUIApp {
                         String className = FNameText.getText();
                         String capacity = LNameText.getText();
                         logic.addClass(className, capacity);
+                        updateComboBox();
                     }
                 }
                 else
@@ -120,6 +121,16 @@ public class GUIApp {
    private void removeClass()
    {
 
+   }
+
+   private void updateComboBox()
+   {
+        ArrayList<String> classList = logic.getClasses();
+        ClassBox.removeAllItems();
+        for(int index = 0; index<classList.size(); index++)
+       {
+            ClassBox.addItem(classList.get(index));
+       }
    }
 
    public void createUIComponents()
