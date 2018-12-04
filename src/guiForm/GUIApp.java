@@ -28,8 +28,6 @@ public class GUIApp {
     private JLabel studentIdLabel;
     private JLabel classesLabel;
     private JLabel firstNameLabel;
-    private JLabel classesLabel;
-    private JLabel studentIdLabel;
     private JLabel lastNameLabel;
     private JButton removeClassButton;
     //connection
@@ -136,9 +134,6 @@ public class GUIApp {
 
    }
 
-
-   public static void adminApp(){
-
    private void updateComboBox()
    {
         ArrayList<String> classList = logic.getClasses();
@@ -149,11 +144,6 @@ public class GUIApp {
        }
    }
 
-   public void createUIComponents()
-   {
-
-   }
-}
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
