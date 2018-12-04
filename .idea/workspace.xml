@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5593af-0bff-41a4-8654-7faf23ae053c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/guiForm/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/GUIApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiForm/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/Logic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -385,7 +384,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.29609543" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" weight="0.29609543" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" sideWeight="0.4989339" visible="true" weight="0.03452244" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
