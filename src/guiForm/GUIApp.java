@@ -8,15 +8,15 @@ import java.sql.*;
 
 public class GUIApp {
     private String adminId = "123456789";
-<<<<<<< HEAD
+
     private boolean isAdmin = false;
     private guiForm.Logic logic;
-=======
-    public boolean isAdmin;
+
+    // boolean isAdmin;
     private boolean addableClass;
     // I am assuming we are using this wrapper for a session's DB connection -- Jess
     private guiForm.DBWrapper wrapper;
->>>>>>> master
+
     //enroll button
     protected JButton enrollButton;
     //main display
@@ -25,6 +25,8 @@ public class GUIApp {
     private JTextField FNameText;
     private JTextField LNameText;
     private JTextField IdText;
+    private JLabel studentIdLabel;
+    private JLabel classesLabel;
     private JLabel firstNameLabel;
     private JLabel lastNameLabel;
     private JButton removeClassButton;
@@ -98,8 +100,10 @@ public class GUIApp {
 
    private void switchStudent()
    {
+       studentIdLabel.setText("Student ID");
        firstNameLabel.setText("First Name");
        lastNameLabel.setText("Last Name");
+       classesLabel.setText("Class: ");
        removeClassButton.setVisible(false);
        enrollButton.setText("Enroll");
    }
@@ -112,24 +116,22 @@ public class GUIApp {
        enrollButton.setText("Add Class");
    }
 
-<<<<<<< HEAD
-   private update
-=======
+
    private void enrollStudent()
    {
-        // wrapper.enroll(student_id, class_id); // <-- need to pass through class that student selects
+        // wrapper.enroll(student_id, student_first, student_last, class_id); // <-- need to pass through class that student selects
    }
 
    private void addClass()
    {
-    // wrapper.
+    // wrapper.addClassAdmin(int classID)
    }
 
    private void removeClass()
    {
 
    }
->>>>>>> master
+
 
    public static void adminApp(){
 
@@ -146,4 +148,8 @@ public class GUIApp {
 //        connect.close();
 //    }catch(Exception e){ System.out.println(e);}
 }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }

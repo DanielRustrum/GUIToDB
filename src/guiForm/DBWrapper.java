@@ -3,6 +3,7 @@ package guiForm;
 import com.mysql.cj.xdevapi.InsertStatement;
 
 import javax.swing.plaf.nimbus.State;
+import javax.swing.plaf.synth.SynthScrollBarUI;
 import java.sql.*;
 import java.sql.DriverManager;
 
@@ -26,17 +27,23 @@ public class DBWrapper {
 
     // Student Queries //
     // TODO: use connection to access classes, attempt to enroll, put in waitlist or enroll
-    public String enroll(int studentIDinput,int classIDinput) throws SQLException
+    public String enroll(int studentIDinput, String student_fist, String student_last,int classIDinput) throws SQLException
     {
+        Boolean studentExist;
+        Boolean classExist;
         int classID;
-        String className;
         int capacity;
-        int queueNum;
         Boolean studentAlreadyEnrolled;
 
 
         try {
 
+            studentExist = studentExists(studentIDinput);
+            if (studentExist == false)
+            {
+                // add student to the student DB
+                addStudent(studentIDinput, student_fist,student_last);
+            }
             // access DB to check cap
             // create statement
             Statement selectStat = connect.createStatement();
@@ -45,14 +52,13 @@ public class DBWrapper {
 
             // check if there are classes to enroll in
             boolean classAvailable = classDB.next();
+            // if the class exists in the database
 
             // if there is a class in the DB
             if(classAvailable) {
                 do {
                     // get class id
                     classID = classDB.getInt("class_id");
-                    // get class name
-                    className = classDB.getString("class_name");
                     //get class capacity
                     capacity = classDB.getInt("cap");
                     // compare user input with class and see if able to enroll
@@ -61,6 +67,7 @@ public class DBWrapper {
                     if (classID == classIDinput) {
 
                         studentAlreadyEnrolled = studentPrevEnrolled(classIDinput, studentIDinput);
+                        System.out.println(studentAlreadyEnrolled);
 
                         // if the cap is 0 and student is not already enrolled
                         if (capacity == 0 && !studentAlreadyEnrolled) {
@@ -107,7 +114,7 @@ public class DBWrapper {
 
             else
             {
-                return "No classes available to enroll in.";
+                return "Class not available for enrollment.";
             }
 
 
@@ -116,7 +123,78 @@ public class DBWrapper {
         return "Enrolled successfully.";
     }
 
-    // TODO: make separate method for: if student has enrolled before, if cap = 0, if cap = 1, if student exists
+    // TODO: make separate method for:  if student exists
+
+        // if student exists
+        public Boolean studentExists(int studentIDinput) throws SQLException
+        {
+            int studentID;
+
+            Statement selectStat = connect.createStatement();
+            //run query to search all students
+            ResultSet studentDB = selectStat.executeQuery("SELECT * FROM student");
+
+            // check if there are students in table
+            boolean studentAvailable = studentDB.first();
+
+            // if there is a class in the DB
+            if (studentAvailable) {
+                do {
+                    // get student id
+                    studentID = studentDB.getInt("student_id");
+                    if (studentID == studentIDinput)
+                    {
+                        return true;
+                    }
+                } while (studentDB.next());
+            }
+
+            // otherwise, student does not exist
+            return false;
+
+    }
+
+//    // check if class exists
+//    boolean doesClassExists(int classIDinput) throws SQLException {
+//        int classID;
+//
+//
+//        // access DB to check cap
+//        // create statement
+//        Statement selectStat = connect.createStatement();
+//        //run query to search all classes
+//        ResultSet classDB = selectStat.executeQuery("SELECT * FROM class");
+//
+//        // check if there are classes to enroll in
+//        boolean classAvailable = classDB.next();
+//
+//        // if there is a class in the DB
+//        if (classAvailable) {
+//            do {
+//                // get class id
+//                classID = classDB.getInt("class_id");
+//                //get class capacity
+//                // if class exists
+//                if(classID == classIDinput)
+//                {
+//                    return true;
+//                }
+//
+//            } while (classDB.next());
+//        }
+//        return false;
+//    }
+
+
+    // add new student to student DB
+    public void addStudent(int student_id, String student_fname, String student_lname) throws SQLException
+    {
+        Statement studentStat = connect.createStatement();
+        studentStat.executeUpdate("INSERT INTO student (student_id, student_first, student_last) "
+                + "VALUES ('" + student_id + "', '" + student_fname + "', '" + student_lname + "')");
+
+
+    }
 
     // check if student has enrolled before
     public Boolean studentPrevEnrolled(int classIDinput, int studentIDinput) throws SQLException {

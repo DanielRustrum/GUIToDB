@@ -8,7 +8,7 @@ public class Logic {
     public Logic()
     {
         wrapper = new guiForm.DBWrapper();
-        classes = new List<String>();
+        // classes = new List<String>();
     }
     public void addClass(String className, String capacity){}
     public void removeClass(Object item){}

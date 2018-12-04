@@ -8,6 +8,6 @@ public class DBWrapperTest {
 
     public static void main(String[] args) throws SQLException
     {
-        dbwrapp.enroll(123,2);
+        dbwrapp.enroll(666, "new", "boi", 3);
     }
 }
