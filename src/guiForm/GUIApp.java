@@ -8,15 +8,8 @@ import java.sql.*;
 
 public class GUIApp {
     private String adminId = "123456789";
-<<<<<<< HEAD
     private boolean isAdmin = false;
     private guiForm.Logic logic;
-=======
-    public boolean isAdmin;
-    private boolean addableClass;
-    // I am assuming we are using this wrapper for a session's DB connection -- Jess
-    private guiForm.DBWrapper wrapper;
->>>>>>> master
     //enroll button
     protected JButton enrollButton;
     //main display
@@ -26,6 +19,8 @@ public class GUIApp {
     private JTextField LNameText;
     private JTextField IdText;
     private JLabel firstNameLabel;
+    private JLabel classesLabel;
+    private JLabel studentIdLabel;
     private JLabel lastNameLabel;
     private JButton removeClassButton;
     //connection
@@ -112,9 +107,6 @@ public class GUIApp {
        enrollButton.setText("Add Class");
    }
 
-<<<<<<< HEAD
-   private update
-=======
    private void enrollStudent()
    {
         // wrapper.enroll(student_id, class_id); // <-- need to pass through class that student selects
@@ -129,21 +121,9 @@ public class GUIApp {
    {
 
    }
->>>>>>> master
 
-   public static void adminApp(){
+   public void createUIComponents()
+   {
 
-//    try{
-//        // get driver
-//        Class.forName("com.mysql.cj.jdbc.Driver");
-//        // establish connection
-//        connect = DriverManager.getConnection(
-//                "jdbc:mysql://localhost:3306/enrollment","root","enter password here");
-//        // create statement ready for sql
-//        Statement stat = connect.createStatement();
-//        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('2134', 'CS 345', '1')");
-//        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('6891', 'CS 400', '1')");
-//        connect.close();
-//    }catch(Exception e){ System.out.println(e);}
-}
+   }
 }
