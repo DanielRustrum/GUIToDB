@@ -134,7 +134,10 @@ public class GUIApp {
 
    }
 
-   private void updateComboBox()
+
+   public static void adminApp(){
+
+   private void updateComboBox();
    {
         ArrayList<String> classList = logic.getClasses();
         ClassBox.removeAllItems();
