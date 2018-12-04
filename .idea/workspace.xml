@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d5593af-0bff-41a4-8654-7faf23ae053c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/guiForm/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/GUIApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiForm/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/Logic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -49,17 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/guiForm/DBWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+            <state relative-caret-position="154">
+              <caret line="104" column="34" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +58,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="109" column="4" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/guiForm/Logic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="621">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#541#542#0" expanded="true" />
                 <element signature="e#569#570#0" expanded="true" />
                 <element signature="e#629#630#0" expanded="true" />
@@ -104,6 +107,7 @@
       <find>isAdmin</find>
       <find>firstNameLabel</find>
       <find>logic</find>
+      <find>return</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,8 +121,8 @@
         <option value="$PROJECT_DIR$/src/guiForm/GUIApp.form" />
         <option value="$PROJECT_DIR$/src/guiForm/DBWrapperTest.java" />
         <option value="$PROJECT_DIR$/src/guiForm/DBWrapper.java" />
-        <option value="$PROJECT_DIR$/src/guiForm/Logic.java" />
         <option value="$PROJECT_DIR$/src/guiForm/GUIApp.java" />
+        <option value="$PROJECT_DIR$/src/guiForm/Logic.java" />
       </list>
     </option>
   </component>
@@ -168,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543893447194" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543893836967" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../GUIproject/GUIToDBPractice" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -246,7 +250,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30951000" />
+    <option name="totallyTimeSpent" value="31286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="-11" width="909" height="1018" extended-state="6" />
@@ -386,34 +390,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/guiForm/Logic.java">
+    <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="287">
+          <caret line="109" column="4" lean-forward="true" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
           <folding>
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/guiForm/DBWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+        <state relative-caret-position="154">
+          <caret line="104" column="34" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/guiForm/GUIApp.java">
+    <entry file="file://$PROJECT_DIR$/src/guiForm/Logic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+        <state relative-caret-position="621">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
           </folding>
         </state>
       </provider>

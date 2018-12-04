@@ -1,4 +1,5 @@
 package guiForm;
+import java.sql.SQLException;
 import java.util.*;
 public class Logic
 {
@@ -23,7 +24,12 @@ public class Logic
 
     public void enrollStudent(String item, String fName, String lName, String id)
     {
-
+        try
+        {
+            wrapper.enroll(0,fName,lName,0);
+        }
+        catch (SQLException e)
+        {}
     }
 
     public void addToClasses(String Class)
