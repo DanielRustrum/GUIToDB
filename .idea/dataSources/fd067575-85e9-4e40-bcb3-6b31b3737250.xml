@@ -1149,51 +1149,42 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="291" parent="284" name="class_class_id_uindex">
-      <ColNames>class_id</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="292" parent="284" name="PRIMARY">
+    <key id="291" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>class_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="293" parent="284" name="class_class_id_uindex">
-      <ColNames>class_id</ColNames>
-      <UnderlyingIndexName>class_class_id_uindex</UnderlyingIndexName>
-    </key>
-    <column id="294" parent="285" name="student_id">
+    <column id="292" parent="285" name="student_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="285" name="class_id">
+    <column id="293" parent="285" name="class_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="296" parent="285" name="enroll_student_id_uindex">
+    <index id="294" parent="285" name="enroll_student_id_uindex">
       <ColNames>student_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="297" parent="285" name="enroll_class_id_uindex">
+    <index id="295" parent="285" name="enroll_class_id_uindex">
       <ColNames>class_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="298" parent="285" name="enroll_student_id_uindex">
+    <key id="296" parent="285" name="enroll_student_id_uindex">
       <ColNames>student_id</ColNames>
       <UnderlyingIndexName>enroll_student_id_uindex</UnderlyingIndexName>
     </key>
-    <key id="299" parent="285" name="enroll_class_id_uindex">
+    <key id="297" parent="285" name="enroll_class_id_uindex">
       <ColNames>class_id</ColNames>
       <UnderlyingIndexName>enroll_class_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="300" parent="285" name="student_id">
+    <foreign-key id="298" parent="285" name="student_id">
       <ColNames>student_id</ColNames>
       <RefSchemaName>enrollment</RefSchemaName>
       <RefTableName>student</RefTableName>
@@ -1201,7 +1192,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="301" parent="285" name="class_id">
+    <foreign-key id="299" parent="285" name="class_id">
       <ColNames>class_id</ColNames>
       <RefSchemaName>enrollment</RefSchemaName>
       <RefTableName>class</RefTableName>
@@ -1209,77 +1200,73 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="302" parent="286" name="student_id">
+    <column id="300" parent="286" name="student_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="286" name="student_first">
+    <column id="301" parent="286" name="student_first">
       <Position>2</Position>
       <DataType>varchar(99)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="286" name="student_last">
+    <column id="302" parent="286" name="student_last">
       <Position>3</Position>
       <DataType>varchar(99)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="305" parent="286" name="student_student_id_uindex">
+    <index id="303" parent="286" name="student_student_id_uindex">
       <ColNames>student_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="306" parent="286" name="PRIMARY">
+    <key id="304" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>student_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="307" parent="286" name="student_student_id_uindex">
+    <key id="305" parent="286" name="student_student_id_uindex">
       <ColNames>student_id</ColNames>
       <UnderlyingIndexName>student_student_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="308" parent="287" name="student_id">
+    <column id="306" parent="287" name="student_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="287" name="class_id">
+    <column id="307" parent="287" name="class_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="287" name="waitListQueue">
+    <column id="308" parent="287" name="waitListQueue">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="311" parent="287" name="wait_list_student_id_uindex">
+    <index id="309" parent="287" name="wait_list_student_id_uindex">
       <ColNames>student_id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="312" parent="287" name="wait_list_class_id_uindex">
+    <index id="310" parent="287" name="class_idWait">
       <ColNames>class_id</ColNames>
-      <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="313" parent="287" name="PRIMARY">
+    <key id="311" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>student_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="314" parent="287" name="wait_list_student_id_uindex">
+    <key id="312" parent="287" name="wait_list_student_id_uindex">
       <ColNames>student_id</ColNames>
       <UnderlyingIndexName>wait_list_student_id_uindex</UnderlyingIndexName>
     </key>
-    <key id="315" parent="287" name="wait_list_class_id_uindex">
-      <ColNames>class_id</ColNames>
-      <UnderlyingIndexName>wait_list_class_id_uindex</UnderlyingIndexName>
-    </key>
-    <foreign-key id="316" parent="287" name="student_idWait">
+    <foreign-key id="313" parent="287" name="student_idWait">
       <ColNames>student_id</ColNames>
       <RefSchemaName>enrollment</RefSchemaName>
       <RefTableName>student</RefTableName>
@@ -1287,7 +1274,7 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <foreign-key id="317" parent="287" name="class_idWait">
+    <foreign-key id="314" parent="287" name="class_idWait">
       <ColNames>class_id</ColNames>
       <RefSchemaName>enrollment</RefSchemaName>
       <RefTableName>class</RefTableName>

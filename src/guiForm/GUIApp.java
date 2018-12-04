@@ -135,9 +135,7 @@ public class GUIApp {
    }
 
 
-   public static void adminApp(){
-
-   private void updateComboBox();
+   private void updateComboBox()
    {
         ArrayList<String> classList = logic.getClasses();
         ClassBox.removeAllItems();
@@ -147,8 +145,4 @@ public class GUIApp {
        }
    }
 
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }
