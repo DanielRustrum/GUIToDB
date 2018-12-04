@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d5593af-0bff-41a4-8654-7faf23ae053c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/guiForm/GUIApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/GUIApp.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiForm/DBWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/DBWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiForm/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiForm/GUIApp.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -168,11 +169,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://fd067575-85e9-4e40-bcb3-6b31b3737250/schema/enrollment/table/class">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Logic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+              <folding>
+                <element signature="e#669#670#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,12 +212,6 @@
         <option value="$PROJECT_DIR$/src/guiForm/GUIApp.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
@@ -275,21 +273,6 @@
               <item name="GUIToDB" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="GUIToDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="GUIToDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
-            <path>
-              <item name="GUIToDB" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-              <item name="fd067575-85e9-4e40-bcb3-6b31b3737250" type="1e004dc1:ScratchProjectViewPane$MyRootNode$1$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -319,7 +302,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DBWrapperTest">
+  <component name="RunManager" selected="Application.GUIApp">
     <configuration name="DBWrapperTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="guiForm.DBWrapperTest" />
       <module name="guiForm" />
@@ -352,8 +335,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DBWrapperTest" />
         <item itemvalue="Application.GUIApp" />
+        <item itemvalue="Application.DBWrapperTest" />
       </list>
     </recent_temporary>
   </component>
@@ -381,7 +364,7 @@
     <option name="totallyTimeSpent" value="29552000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="44" y="-11" width="1877" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09914712" />
@@ -420,9 +403,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Form.java" />
@@ -593,6 +573,18 @@
       <state key="ModuleStructureConfigurable.UI">
         <settings>
           <last-edited>guiForm</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

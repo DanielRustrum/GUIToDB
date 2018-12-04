@@ -1,10 +1,11 @@
 package guiForm;
 
 import javax.swing.*;
-import java.awt.*;
+import java.util.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class GUIApp {
     private String adminId = "123456789";
@@ -19,7 +20,6 @@ public class GUIApp {
 
     //enroll button
     protected JButton enrollButton;
-    //main display
     protected JPanel mainPanel;
     private JComboBox ClassBox;
     private JTextField FNameText;
@@ -28,6 +28,8 @@ public class GUIApp {
     private JLabel studentIdLabel;
     private JLabel classesLabel;
     private JLabel firstNameLabel;
+    private JLabel classesLabel;
+    private JLabel studentIdLabel;
     private JLabel lastNameLabel;
     private JButton removeClassButton;
     //connection
@@ -38,6 +40,7 @@ public class GUIApp {
     public GUIApp()
     {
         logic = new guiForm.Logic();
+        updateComboBox();
         enrollButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e)
@@ -57,6 +60,7 @@ public class GUIApp {
                         String className = FNameText.getText();
                         String capacity = LNameText.getText();
                         logic.addClass(className, capacity);
+                        updateComboBox();
                     }
                 }
                 else
@@ -135,18 +139,20 @@ public class GUIApp {
 
    public static void adminApp(){
 
-//    try{
-//        // get driver
-//        Class.forName("com.mysql.cj.jdbc.Driver");
-//        // establish connection
-//        connect = DriverManager.getConnection(
-//                "jdbc:mysql://localhost:3306/enrollment","root","enter password here");
-//        // create statement ready for sql
-//        Statement stat = connect.createStatement();
-//        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('2134', 'CS 345', '1')");
-//        stat.executeUpdate("INSERT INTO class (class_id, class_name, cap) VALUES ('6891', 'CS 400', '1')");
-//        connect.close();
-//    }catch(Exception e){ System.out.println(e);}
+   private void updateComboBox()
+   {
+        ArrayList<String> classList = logic.getClasses();
+        ClassBox.removeAllItems();
+        for(int index = 0; index<classList.size(); index++)
+       {
+            ClassBox.addItem(classList.get(index));
+       }
+   }
+
+   public void createUIComponents()
+   {
+
+   }
 }
 
     private void createUIComponents() {
