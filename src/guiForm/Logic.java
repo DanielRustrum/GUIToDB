@@ -6,11 +6,11 @@ public class Logic
 {
 
     public ArrayList<String> classes;
-    private guiForm.DBWrapper wrapper;
+    private DBWrapper wrapper;
 
     public Logic()
     {
-        wrapper = new guiForm.DBWrapper();
+        wrapper = new DBWrapper();
         classes = new ArrayList<String>();
     }
     public String addClass(String className, String capacity)
