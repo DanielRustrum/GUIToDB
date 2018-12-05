@@ -24,7 +24,7 @@ public class Logic
         }
         catch (Exception exception)
         {
-            return "Error" + exception;
+            return "Error: Capacity needs to be a number";
         }
         return result;
     }
@@ -39,7 +39,7 @@ public class Logic
         }
         catch (Exception exception)
         {
-            return "Error" + exception;
+            return "Error";
         }
         return result;
     }
@@ -54,7 +54,7 @@ public class Logic
         }
         catch (Exception exception)
         {
-            return "Error" + exception;
+            return "Error";
         }
         return result;
     }
