@@ -26,7 +26,7 @@ public class Logic
     {
         try
         {
-            wrapper.enroll(0,fName,lName,0);
+            wrapper.enrollStudent(0,fName,lName,"CS 345");
         }
         catch (SQLException e)
         {}

@@ -18,7 +18,7 @@ public class DBWrapperTest {
         System.out.println(dbwrapp.enrollStudent(777, "new", "boi", "idk"));
 
         // admin add
-         System.out.println(dbwrapp.deleteClassAdmin("idk"));
+         System.out.println(dbwrapp.addClassAdmin("next"));
 
 
     }

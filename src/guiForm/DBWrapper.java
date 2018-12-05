@@ -6,6 +6,7 @@ import javax.swing.plaf.nimbus.State;
 import javax.swing.plaf.synth.SynthScrollBarUI;
 import java.sql.*;
 import java.sql.DriverManager;
+import java.util.Random;
 
 
 public class DBWrapper {
@@ -264,20 +265,24 @@ public class DBWrapper {
     }
 
     // add class thru admin
-    public String addClassAdmin(int classID, String className) throws SQLException
+    public String addClassAdmin(String className) throws SQLException
     {
-        int classIDdb;
+        // randomly generated id for new class
+        Random randNum = new Random();
+        int classID = randNum.nextInt(50) + 1;
+
+        String classNameDB;
         Statement classCheck = connect.createStatement();
         ResultSet classDB = classCheck.executeQuery("SELECT * FROM class");
         Boolean classesAvail = classDB.next();
         if (classesAvail)
         {
             do {
-                classIDdb = classDB.getInt("class_id");
+                classNameDB = classDB.getString("class_name");
 
-                if (classIDdb == classID)
+                if (className.equals(classNameDB))
                 {
-                    return "This class already exists.  To create a new section, use a different id.";
+                    return "This class already exists.";
                 }
             } while(classDB.next());
         }
