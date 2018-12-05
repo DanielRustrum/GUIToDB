@@ -22,6 +22,7 @@ public class GUIApp {
     private JLabel firstNameLabel;
     private JLabel lastNameLabel;
     private JButton removeClassButton;
+    private JLabel statusMessage;
 
     public GUIApp()
     {
@@ -46,7 +47,8 @@ public class GUIApp {
                     {
                         String className = FNameText.getText();
                         String capacity = LNameText.getText();
-                        logic.addClass(className, capacity);
+                        String result = logic.addClass(className, capacity);
+                        statusMessage.setText(result);
                         updateComboBox();
                     }
                 }
@@ -63,7 +65,8 @@ public class GUIApp {
                         Object item = ClassBox.getSelectedItem();
                         String fName = FNameText.getText();
                         String lName = LNameText.getText();
-                        logic.enrollStudent((String)item, fName, lName, userId);
+                        String result = logic.enrollStudent((String)item, fName, lName, userId);
+                        statusMessage.setText(result);
                     }
                 }
 
@@ -74,7 +77,8 @@ public class GUIApp {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 Object item = ClassBox.getSelectedItem();
-                logic.removeClass((String)item);
+                String result = logic.removeClass((String)item);
+                statusMessage.setText(result);
             }
         });
     }

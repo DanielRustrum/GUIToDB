@@ -1,6 +1,7 @@
 package guiForm;
-import java.sql.SQLException;
+
 import java.util.*;
+
 public class Logic
 {
 
@@ -10,26 +11,29 @@ public class Logic
     public Logic()
     {
         wrapper = new guiForm.DBWrapper();
-        classes = new ArrayList<>();
+        classes = new ArrayList<String>();
     }
-    public void addClass(String className, String capacity)
+    public String addClass(String className, String capacity)
     {
 
+        return "Error";
     }
 
-    public void removeClass(String item)
+    public String removeClass(String item)
     {
-
+        return "Error";
     }
 
-    public void enrollStudent(String item, String fName, String lName, String id)
+    public String enrollStudent(String item, String fName, String lName, String id)
     {
+        int studentId = Integer.parseInt(id);
         try
         {
-            wrapper.enrollStudent(0,fName,lName,"CS 345");
+            wrapper.enrollStudent(studentId,fName,lName,item);
         }
-        catch (SQLException e)
+        catch (Exception exception)
         {}
+        return "Error";
     }
 
     public void addToClasses(String Class)

@@ -1,9 +1,5 @@
 package guiForm;
 
-import com.mysql.cj.xdevapi.InsertStatement;
-
-import javax.swing.plaf.nimbus.State;
-import javax.swing.plaf.synth.SynthScrollBarUI;
 import java.sql.*;
 import java.sql.DriverManager;
 import java.util.Random;
@@ -165,34 +161,34 @@ public class DBWrapper {
         return "You have been added to the wait list.";
     }
 
-        // if student exists
-        public Boolean studentExists(int studentIDinput) throws SQLException
-        {
-            int studentID;
+    // if student exists
+    public Boolean studentExists(int studentIDinput) throws SQLException
+    {
+        int studentID;
 
-            Statement selectStat = connect.createStatement();
-            //run query to search all students
-            ResultSet studentDB = selectStat.executeQuery("SELECT * FROM student");
+        Statement selectStat = connect.createStatement();
+        //run query to search all students
+        ResultSet studentDB = selectStat.executeQuery("SELECT * FROM student");
 
-            // check if there are students in table
-            boolean studentAvailable = studentDB.first();
+        // check if there are students in table
+        boolean studentAvailable = studentDB.first();
 
-            // if there is a class in the DB
-            if (studentAvailable) {
-                do {
-                    // get student id
-                    studentID = studentDB.getInt("student_id");
-                    if (studentID == studentIDinput)
-                    {
-                        return true;
-                    }
-                } while (studentDB.next());
-            }
+        // if there is a class in the DB
+        if (studentAvailable) {
+            do {
+                // get student id
+                studentID = studentDB.getInt("student_id");
+                if (studentID == studentIDinput)
+                {
+                    return true;
+                }
+            } while (studentDB.next());
+        }
 
-            // otherwise, student does not exist
-            return false;
+        // otherwise, student does not exist
+        return false;
 
-    }
+}
 
     // check if class exists
     boolean doesClassExists(String classNameinput) throws SQLException {
