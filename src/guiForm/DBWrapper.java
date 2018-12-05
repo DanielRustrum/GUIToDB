@@ -261,7 +261,7 @@ public class DBWrapper {
     }
 
     // add class thru admin
-    public String addClassAdmin(String className) throws SQLException
+    public String addClassAdmin(String className, int cap) throws SQLException
     {
         // randomly generated id for new class
         Random randNum = new Random();

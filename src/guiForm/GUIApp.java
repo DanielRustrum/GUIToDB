@@ -5,10 +5,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class GUIApp {
+public class GUIApp extends JPanel {
     private String adminId = "123456789";
     private boolean isAdmin = false;
-    private guiForm.Logic logic;
+    private Logic logic;
 
     //enroll button
     protected JButton enrollButton;
@@ -26,7 +26,9 @@ public class GUIApp {
 
     public GUIApp()
     {
-        logic = new guiForm.Logic();
+        initComponents();
+        logic = new Logic();
+        removeClassButton.setVisible(false);
         updateComboBox();
 
         enrollButton.addActionListener(new ActionListener() {
@@ -39,7 +41,7 @@ public class GUIApp {
                     if(!isAdmin)
                     {
                         switchAdmin();
-                        JOptionPane.showMessageDialog(null, "It seems you are an admin, Please" +
+                        JOptionPane.showMessageDialog(null, "It seems you are an admin, Please " +
                                 "Enter The Appropriate Info.");
                         isAdmin = true;
                     }
@@ -79,6 +81,7 @@ public class GUIApp {
                 Object item = ClassBox.getSelectedItem();
                 String result = logic.removeClass((String)item);
                 statusMessage.setText(result);
+                updateComboBox();
             }
         });
     }
@@ -86,8 +89,9 @@ public class GUIApp {
     public static void main(String[] args)
     {
         JFrame guiFrame = new JFrame("GUItoDB");
-        guiFrame.setContentPane(new GUIApp().mainPanel);
         guiFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        GUIApp newgui = new GUIApp();
+        guiFrame.setContentPane(newgui.mainPanel);
         guiFrame.pack();
         guiFrame.setVisible(true);
     }
@@ -97,7 +101,7 @@ public class GUIApp {
        studentIdLabel.setText("Student ID");
        firstNameLabel.setText("First Name");
        lastNameLabel.setText("Last Name");
-       classesLabel.setText("Class: ");
+       classesLabel.setText("Classes");
        removeClassButton.setVisible(false);
        enrollButton.setText("Enroll");
    }
@@ -105,6 +109,7 @@ public class GUIApp {
    private void switchAdmin()
    {
        firstNameLabel.setText("Classname");
+       classesLabel.setText("Classes to remove");
        lastNameLabel.setText("Class Capacity");
        removeClassButton.setVisible(true);
        enrollButton.setText("Add Class");
@@ -119,6 +124,10 @@ public class GUIApp {
             ClassBox.addItem(classList.get(index));
         }
    }
+
+    private void initComponents() {
+
+    }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here

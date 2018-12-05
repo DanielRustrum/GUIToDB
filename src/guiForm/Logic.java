@@ -15,25 +15,48 @@ public class Logic
     }
     public String addClass(String className, String capacity)
     {
-
-        return "Error";
+        String result = "";
+        try
+        {
+            int cap = Integer.parseInt(capacity);
+            //result = wrapper.addClassAdmin(className, cap);
+            addToClasses(className);
+        }
+        catch (Exception exception)
+        {
+            return "Error" + exception;
+        }
+        return result;
     }
 
     public String removeClass(String item)
     {
-        return "Error";
+        String result = "";
+        try
+        {
+            //result = wrapper.deleteClassAdmin(item);
+            removeFromClasses(item);
+        }
+        catch (Exception exception)
+        {
+            return "Error" + exception;
+        }
+        return result;
     }
 
     public String enrollStudent(String item, String fName, String lName, String id)
     {
-        int studentId = Integer.parseInt(id);
+        String result = "";
         try
         {
-            wrapper.enrollStudent(studentId,fName,lName,item);
+            int studentId = Integer.parseInt(id);
+            //result = wrapper.enrollStudent(studentId,fName,lName,item);
         }
         catch (Exception exception)
-        {}
-        return "Error";
+        {
+            return "Error" + exception;
+        }
+        return result;
     }
 
     public void addToClasses(String Class)
@@ -43,7 +66,14 @@ public class Logic
 
     public void removeFromClasses(String Class)
     {
-        classes.remove(Class);
+        if(classes.size() <= 1)
+        {
+            classes.clear();
+        }
+        else
+        {
+            classes.remove(Class);
+        }
     }
 
     public ArrayList<String> getClasses()
