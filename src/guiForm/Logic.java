@@ -19,7 +19,7 @@ public class Logic
         try
         {
             int cap = Integer.parseInt(capacity);
-            //result = wrapper.addClassAdmin(className, cap);
+            result = wrapper.addClassAdmin(className, cap);
             addToClasses(className);
         }
         catch (Exception exception)
@@ -34,7 +34,7 @@ public class Logic
         String result = "";
         try
         {
-            //result = wrapper.deleteClassAdmin(item);
+            result = wrapper.deleteClassAdmin(item);
             removeFromClasses(item);
         }
         catch (Exception exception)
@@ -50,7 +50,7 @@ public class Logic
         try
         {
             int studentId = Integer.parseInt(id);
-            //result = wrapper.enrollStudent(studentId,fName,lName,item);
+            result = wrapper.enrollStudent(studentId,fName,lName,item);
         }
         catch (Exception exception)
         {
